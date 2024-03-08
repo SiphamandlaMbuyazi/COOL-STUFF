@@ -50,18 +50,17 @@
             
             <div class="card-header bg-transparent border-success">Bet It funny</div>
             <div class="card-body text-success">
-                <h5 class="card-title">JOKE</h5>
-                <p id="joke" class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <h3 class="card-title">JOKE</h3>
+                <h5 id="joke" class="card-title">Some quick example text to build on the card title and make up the bulk of the card's content.</h5>
             </div>
             <button id='next-joke' type="button" class="btn btn-primary">LOL!</button>
         </div>
     </div>
 </body>
 <script>
-  document.querySelector('p').innerHTML ="Something now.";
 
 const button = document.querySelector("#next-joke");
-const jokeDiv = document.querySelector("p");
+const jokeDiv = document.querySelector("h5");
 
 document.addEventListener("DOMContentLoaded", getJock);
 
@@ -75,7 +74,7 @@ async function getJock() {
   });
   const jokeObj = await jokeData.json();
   jokeDiv.innerHTML = jokeObj.joke;
-  console.log(jokeData);
+  //console.log(jokeData);
 }
 
 </script>
